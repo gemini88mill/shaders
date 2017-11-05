@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shaders</title>
+
+    <script src="libs/three.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <script src="js/GLSLVars.js"></script>
+    <script src="js/objects.js"></script>
+
+
+
+
+</head>
+<body>
+
+<script type="x-shader/x-vertex" id="vertex">
+varying vec2 uVu;
+void main()
+{
+	uVu = uv;
+
+	gl_Position = projectionMatrix *
+		modelViewMatrix *
+		vec4(position,1.0);
+}
+</script>
+<script type="x-shader/x-vertex" id="vertex2">
+varying vec2 uVu;
+void main()
+{
+	uVu = uv;
+
+	gl_Position = projectionMatrix *
+		modelViewMatrix *
+		vec4(position,1.0);
+}
+</script>
+<script type="x-shader/x-vertex" id="vertex3">
+varying vec2 uVu;
+void main()
+{
+	uVu = uv;
+
+	gl_Position = projectionMatrix *
+		modelViewMatrix *
+		vec4(position,1.0);
+}
+</script>
+<script type="x-shader/x-vertex" id="vertex4">
+varying vec2 uVu;
+void main()
+{
+	uVu = uv;
+
+	gl_Position = projectionMatrix *
+		modelViewMatrix *
+		vec4(position,1.0);
+}
+</script>
+
+
+
+<script type="x-shader/x-fragment" id="fragment">
+varying vec2 uVu;
+void main()
+{
+	float red = 0.9;
+	float green = 0.3;
+	float blue = 0.4;
+	gl_FragColor = vec4(red,green,blue,0.4);
+}
+</script>
+
+<script type="x-shader/x-fragment" id="fragment2">
+varying vec2 uVu;
+void main()
+{
+	float red = 0.9;
+	float green = 0.3;
+	float blue = 0.4;
+	gl_FragColor = vec4(red,green,blue,0.4);
+}
+</script>
+
+<script type="x-shader/x-fragment" id="fragment3">
+varying vec2 uVu;
+void main()
+{
+	float red = 0.9;
+	float green = 0.3;
+	float blue = 0.4;
+	gl_FragColor = vec4(red,green,blue,0.4);
+}
+</script>
+
+<script type="x-shader/x-fragment" id="fragment4">
+varying vec2 uVu;
+void main()
+{
+	float red = 0.9;
+	float green = 0.3;
+	float blue = 0.4;
+	gl_FragColor = vec4(red,green,blue,0.4);
+}
+</script>
+
+
+
+
+
+
+
+<script src="js/shaders.js"></script>
+
+</body>
+</html>
