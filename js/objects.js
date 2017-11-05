@@ -13,15 +13,15 @@ var attributes = {
 };
 
 var box;
-function addBox()
+function addBox(frag, vert, posX, posY)
 {
     //var mat = new THREE.MeshLambertMaterial({color:0xff00ff});
-    var mat = shaderMaterial('fragment_shader4', 'vertex');
+    var mat = shaderMaterial(frag, vert);
     var geo = new THREE.BoxGeometry( 2, 2, 2 );
     box = new THREE.Mesh( geo, mat );
 
-    box.position.x = -2;
-    box.position.y = +2;
+    box.position.x = posX;
+    box.position.y = posY;
 
     scene.add( box );
 }

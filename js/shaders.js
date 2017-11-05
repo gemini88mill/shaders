@@ -12,7 +12,8 @@ function init()
     addSpotlight();
 
     // Main code here.
-    addBox();
+    addBox('fragment', 'vertex', -2, 2);
+    addBox('fragment2', 'vertex2', -2, -2);
     addSphere();
 
 
