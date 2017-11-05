@@ -17,6 +17,7 @@
 </head>
 <body>
 
+<!--top left box-->
 <script type="x-shader/x-vertex" id="vertex">
 varying vec2 uVu;
 void main()
@@ -28,41 +29,6 @@ void main()
 		vec4(position,1.0);
 }
 </script>
-<script type="x-shader/x-vertex" id="vertex2">
-varying vec2 uVu;
-void main()
-{
-	uVu = uv;
-
-	gl_Position = projectionMatrix *
-		modelViewMatrix *
-		vec4(position,1.0);
-}
-</script>
-<script type="x-shader/x-vertex" id="vertex3">
-varying vec2 uVu;
-void main()
-{
-	uVu = uv;
-
-	gl_Position = projectionMatrix *
-		modelViewMatrix *
-		vec4(position,1.0);
-}
-</script>
-<script type="x-shader/x-vertex" id="vertex4">
-varying vec2 uVu;
-void main()
-{
-	uVu = uv;
-
-	gl_Position = projectionMatrix *
-		modelViewMatrix *
-		vec4(position,1.0);
-}
-</script>
-
-
 
 <script type="x-shader/x-fragment" id="fragment">
 varying vec2 uVu;
@@ -75,14 +41,41 @@ void main()
 }
 </script>
 
+<!--Bottom left box-->
+<script type="x-shader/x-vertex" id="vertex2">
+varying vec2 uVu;
+void main()
+{
+	uVu = uv;
+
+	gl_Position = projectionMatrix *
+		modelViewMatrix *
+		vec4(position,1.0);
+}
+</script>
+
 <script type="x-shader/x-fragment" id="fragment2">
 varying vec2 uVu;
 void main()
 {
-	float red = 0.9;
-	float green = 0.3;
+	float red = 1.0;
+	float green = 1.0;
 	float blue = 0.4;
 	gl_FragColor = vec4(red,green,blue,0.4);
+}
+</script>
+<!--Bottom left box-->
+
+<!--Sphere Top left-->
+<script type="x-shader/x-vertex" id="vertex3">
+varying vec2 uVu;
+void main()
+{
+	uVu = uv;
+
+	gl_Position = projectionMatrix *
+		modelViewMatrix *
+		vec4(position,1.0);
 }
 </script>
 
@@ -96,6 +89,20 @@ void main()
 	gl_FragColor = vec4(red,green,blue,0.4);
 }
 </script>
+<!--Sphere Top left-->
+
+
+<script type="x-shader/x-vertex" id="vertex4">
+varying vec2 uVu;
+void main()
+{
+	uVu = uv;
+
+	gl_Position = projectionMatrix *
+		modelViewMatrix *
+		vec4(position,1.0);
+}
+</script>
 
 <script type="x-shader/x-fragment" id="fragment4">
 varying vec2 uVu;
@@ -103,7 +110,7 @@ void main()
 {
 	float red = 0.9;
 	float green = 0.3;
-	float blue = 0.4;
+	float blue = 1.0;
 	gl_FragColor = vec4(red,green,blue,0.4);
 }
 </script>

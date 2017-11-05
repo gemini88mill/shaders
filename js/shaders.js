@@ -2,6 +2,8 @@ var renderer;
 var scene;
 var camera;
 
+var box;
+var sphere;
 
 
 function init()
@@ -12,9 +14,10 @@ function init()
     addSpotlight();
 
     // Main code here.
-    addBox('fragment', 'vertex', -2, 2);
-    addBox('fragment2', 'vertex2', -2, -2);
-    addSphere();
+    addBox('fragment', 'vertex', -2, 2, 'topLeft');
+    addBox('fragment2', 'vertex2', -2, -2, 'bottomRight');
+    addSphere('fragment3', 'vertex3', 2, 2, 'topRight');
+    addSphere('fragment4', 'vertex4', 2, -2, 'bottomRight');
 
 
     // Output to the stream
@@ -46,6 +49,8 @@ function render()
     box.rotation.x += 0.01;
     box.rotation.y += 0.01;
     box.rotation.z += 0.01;
+
+    sphere.rotation.z += 0.01;
 
 
     // Request animation frame

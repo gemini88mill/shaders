@@ -17,12 +17,12 @@ var attributes = {
     }
 };
 
-// now populate the array of attributes
-var vertices = sphere.geometry.vertices;
-var values = attributes.displacement.value;
-for(var v = 0; v < vertices.length; v++) {
-    values.push(Math.random() * 2);
-}
+// // now populate the array of attributes
+// //var vertices = sphere.geometry.vertices;
+// var values = attributes.displacement.value;
+// for(var v = 0; v < vertices.length; v++) {
+//     values.push(Math.random() * 2);
+// }
 
 
 // create the material and now
